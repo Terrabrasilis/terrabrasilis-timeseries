@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<title>ocpusits</title>
+<title>terrabrasilisTimeSeries</title>
 
 <!-- problem favicon -->
 <link rel="icon" href="data:;base64,iVBORw0KGgo=">
@@ -110,7 +110,7 @@
   <nav id="sidebar">
     <div class="sidebar-header">
       <div class="desctxt">
-        <!-- <h5><span class="branco">ocpusits</span></h5> -->
+         <h5><span class="branco">terrabrasilisTimeSeries</span></h5>
       </div>
     </div>
     <ul class="list-unstyled components">
@@ -119,16 +119,15 @@
     </ul>
 
     <ul class="list-unstyled CTAs">
-      <!-- <li><a href="https://github.com/ammaciel/ocpusits" class="btn btn-primary" target="_blank"><span id="nv-home">Github Project</span></a></li> -->
-      <a href="https://github.com/ammaciel/ocpusits" target="_blank">
-        <button type="button" id="nv-home" class="btn btn-primary"> <h5>Github Project</h5></button>
+      <a href="https://github.com/Terrabrasilis/terrabrasilisTimeSeries" target="_blank">
+        <button type="button" id="nv-home" class="btn btn-success"> <h5>Github Project</h5></button>
       </a>
     </ul>
   </nav>
 
   <!-- Menu superior -->
   <div id="content">
-    <nav class="navbar navbar-expand-lg materialnav navbar-header"> <i class="material-icons menuicon" id="sidebarCollapse" >menu</i> <a class="navbar-brand" href="#"><span class="branco" >ocpusits</span><span class="branco"> (OpenCPU Satellite Image Time Series)</span></a>
+    <nav class="navbar navbar-expand-lg materialnav navbar-header"> <i class="material-icons menuicon" id="sidebarCollapse" >menu</i> <a class="navbar-brand" href="#"><span class="branco" >terrabrasilisTimeSeries package</span><span class="branco"> (TerraBrasilis Time Series (OpenCPU))</span></a>
       <!-- <div class="navbar-nav collapse navbar-collapse justify-content-between"> <a class="nav-item nav-link" href="#">| Sistema de Monitoramento Ambiental</a> </div> -->
       <button class="navbar-toggler" id="menuanaliseid" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <i class="material-icons menuicon">more_vert</i> </button>
 
@@ -162,7 +161,7 @@
           </div>
           <div class="form-group">
             <input type="number" class="form-control" id="long" placeholder="Longitude" > <!-- value="-56.245043"-->
-            <button type="button" id="showLatLong" class="btn btn-outline-primary"> Show points! </button>
+            <button type="button" id="showLatLong" class="btn btn-outline-success"> Show points! </button>
           </div>
           <div class="form-group">
             <select class="form-control" multiple id="band" required>
@@ -187,7 +186,7 @@
               <input type="date" class="form-control" id="to" value="2016-04-13">
             </div>
             <!-- <button type="button" id="submitbutton"> Submit to server! </button> -->
-           <button type="button" id="submitbutton" class="btn btn-primary"> Submit to server! </button>
+           <button type="button" id="submitbutton" class="btn btn-success"> Submit to server! </button>
 
             <!-- <button id="changeColor">Rectangle -> Blue</button> -->
 
@@ -216,17 +215,17 @@
                 <label for="sg-order"> <input type="number" class="form-control" id="sg-order" required placeholder="order" value="3" disabled> order </label>
                 <label for="sg-scale"> <input type="number" class="form-control" id="sg-scale" required placeholder="scale" value="1" disabled> scale </label>
               </div>
-              <button type="button" id="submitbuttonfilter" class="btn btn-primary" disabled> Apply filter! </button>
+              <button type="button" id="submitbuttonfilter" class="btn btn-success" disabled> Apply filter! </button>
       </div>
 
       <div class="col-sm-10">
       <!-- place holder for map -->
 
       <div class="btn-group btn-group-toggle" data-toggle="buttons">
-        <label class="btn btn-outline-primary active">
+        <label class="btn btn-outline-success active">
           <input type="radio" name="mode-options" id="get-point" value="point" checked > Point
         </label>
-        <label class="btn btn-outline-primary">
+        <label class="btn btn-outline-success">
           <input type="radio" name="mode-options" id="get-polygon" value="polygon"> Polygon
         </label>
       </div>
@@ -272,9 +271,9 @@
       <br/>
       <div class="buttons-table">
           <div class="action_btn">
-            <button type="button" id="saveCSV" class="w3-large, btn btn-outline-primary"><i class="fa fa-save" aria-hidden="true"></i> Download CSV </button>
-            <button type="button" id="deleteRow" class="w3-large, btn btn-outline-primary"><i class="fa fa-trash" aria-hidden="true"></i> Delete Rows </button>
-            <button type="button" id="clearTable" class="w3-large, btn btn-outline-primary"><i class="fa fa-table" aria-hidden="true"></i> Clear Table </button>
+            <button type="button" id="saveCSV" class="w3-large, btn btn-outline-success"><i class="fa fa-save" aria-hidden="true"></i> Download CSV </button>
+            <button type="button" id="deleteRow" class="w3-large, btn btn-outline-success"><i class="fa fa-trash" aria-hidden="true"></i> Delete Rows </button>
+            <button type="button" id="clearTable" class="w3-large, btn btn-outline-success"><i class="fa fa-table" aria-hidden="true"></i> Clear Table </button>
         </div>
     </div>
 
@@ -306,7 +305,7 @@
 
 <!--Footer-->
 <footer class="footer">
-  <p>© 2019<a href="#"> ocpusits</a></p>
+  <p>© 2019<a href="#"> terrabrasilisTimeSeries</a></p>
 </footer>
 <!--/.Footer-->
 
