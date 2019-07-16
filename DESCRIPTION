@@ -1,0 +1,22 @@
+Package: terrabrasilisTimeSeries
+Type: Package
+Title: TerraBrasilis Time Series
+Version: 0.1.0
+Author: Adeline Maciel [aut, cre]
+Maintainer: Adeline Maciel <adelsud6@gmail.com>
+Description: TerraBrasilis Time Series using opencpu for the integration between R and Web applications. With this webapp is possible to capture points of time series from a web leaflet map.
+License: file LICENSE
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 6.1.1
+Imports:
+        jsonlite,
+        magrittr,
+        sits,
+        stats,
+        tibble
+Remotes:
+      e-sensing/sits
+URL: https://github.com/Terrabrasilis/terrabrasilisTimeSeries
+BugReports: https://github.com/Terrabrasilis/terrabrasilisTimeSeries
+Suggests: curl
