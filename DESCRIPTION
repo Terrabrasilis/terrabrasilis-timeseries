@@ -17,6 +17,6 @@ Imports:
         tibble
 Remotes:
       e-sensing/sits
-URL: https://github.com/Terrabrasilis/terrabrasilisTimeSeries
-BugReports: https://github.com/Terrabrasilis/terrabrasilisTimeSeries
+URL: https://github.com/Terrabrasilis/terrabrasilis-timeseries
+BugReports: https://github.com/Terrabrasilis/terrabrasilis-timeseries
 Suggests: curl

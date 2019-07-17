@@ -16,7 +16,7 @@ Fig. 1. Application design using OpenCPU
 </tr>
 </table>
 
-With a webhook, every push to Github will be mirrored onto the OpenCPU server. You can access the app on https://terrabrasilis.ocpu.io/terrabrasilisTimeSeries/www
+With a webhook, every push to Github will be mirrored onto the OpenCPU server. You can access the app on https://terrabrasilis.ocpu.io/terrabrasilis-timeseries/www
 
 
 ## Prerequisites:
