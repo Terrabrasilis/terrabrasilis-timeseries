@@ -1,4 +1,4 @@
-Package: terrabrasilistimeseries
+Package: terrabrasilisTimeSeries
 Type: Package
 Title: TerraBrasilis Time Series
 Version: 0.1.1
@@ -18,6 +18,6 @@ Imports:
         wtss
 Remotes:
       e-sensing/sits
-URL: https://github.com/terrabrasilis/terrabrasilistimeseries
-BugReports: https://github.com/terrabrasilis/terrabrasilistimeseries
+URL: https://github.com/terrabrasilis/terrabrasilis-timeseries
+BugReports: https://github.com/terrabrasilis/terrabrasilis-timeseries
 Suggests: curl

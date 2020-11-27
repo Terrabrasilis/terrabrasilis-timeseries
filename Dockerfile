@@ -22,7 +22,7 @@ RUN apt-get -qy autoremove
 RUN R -e 'install.packages("devtools")'
 RUN R -e 'devtools::install_github("e-sensing/wtss")'
 RUN R -e 'devtools::install_github("e-sensing/sits")'
-RUN R -e 'devtools::install_github("terrabrasilis/terrabrasilistimeseries")'
+RUN R -e 'devtools::install_github("terrabrasilis/terrabrasilis-timeseries")'
 
 RUN \
 echo 'Redirect /index.html /ocpu/library/ocpusits/www' > /etc/apache2/sites-enabled/app.conf
