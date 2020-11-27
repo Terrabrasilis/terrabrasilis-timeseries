@@ -19,7 +19,7 @@
 #' @return Plot time series filtered
 #' @export
 #'
-#' @importFrom sits sits_whittaker sits_sgolay sits_merge sits_plot
+#' @importFrom sits sits_whittaker sits_sgolay sits_merge
 #' @importFrom magrittr "%>%"
 #'
 

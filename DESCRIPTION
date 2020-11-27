@@ -18,6 +18,6 @@ Imports:
         wtss
 Remotes:
       e-sensing/sits
-URL: https://github.com/terrabrasilis/terrabrasilis-timeseries
-BugReports: https://github.com/terrabrasilis/terrabrasilis-timeseries
+URL: https://github.com/terrabrasilis/terrabrasilisTimeSeries
+BugReports: https://github.com/terrabrasilis/terrabrasilisTimeSeries
 Suggests: curl
