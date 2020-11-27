@@ -20,7 +20,7 @@
 #' @param pre_filter    a string ("0" none, "1" no data correction, "2" cloud correction, "3" no data and cloud correction). Information of sits package.
 #' @return Data set with time series data
 #' @export
-#'
+#' @import wtss
 #' @importFrom sits sits_cube sits_get_data
 #'
 

@@ -19,7 +19,7 @@
 #' @param geojson_points   receive a GeoJSON with all points from polygon
 #' @return Data set with time series data
 #' @export
-#'
+#' @import wtss
 #' @importFrom sits sits_cube sits_get_data
 #' @importFrom jsonlite fromJSON
 #' @importFrom tibble tibble

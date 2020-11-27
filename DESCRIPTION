@@ -14,9 +14,10 @@ Imports:
         magrittr,
         sits,
         stats,
-        tibble
+        tibble,
+        wtss
 Remotes:
       e-sensing/sits
-URL: https://github.com/Terrabrasilis/terrabrasilis-timeseries
-BugReports: https://github.com/Terrabrasilis/terrabrasilis-timeseries
+URL: https://github.com/terrabrasilis/terrabrasilis-timeseries
+BugReports: https://github.com/terrabrasilis/terrabrasilis-timeseries
 Suggests: curl
