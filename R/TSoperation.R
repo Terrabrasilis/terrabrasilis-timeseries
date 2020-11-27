@@ -21,7 +21,7 @@
 #' @return Data set with time series data
 #' @export
 #'
-#' @importFrom sits sits_coverage sits_get_data
+#' @importFrom sits sits_cube sits_get_data
 #'
 
 TSoperation <- function(name_service = c("WTSS-INPE", "SATVEG"), coverage = c("MOD13Q1", "terra", "aqua", "comb"), longitude = NULL, latitude = NULL, bands = c("ndvi", "evi", "nir", "mir", "blue", "red"), start_date = NULL, end_date = NULL, pre_filter = "1"){
@@ -31,21 +31,21 @@ TSoperation <- function(name_service = c("WTSS-INPE", "SATVEG"), coverage = c("M
   coverage <- match.arg(coverage)
 
   if(name_service == "WTSS-INPE" & coverage == "MOD13Q1"){
-    coverage_wtss.tb <- sits::sits_coverage(service = name_service, name = coverage)
+    name_service_used = "WTSS"
+    cube_wtss <- sits::sits_cube(type = name_service_used, name = coverage, URL = "http://www.esensing.dpi.inpe.br/wtss/")
     # retrieve the time series associated with the point from the WTSS server
-    point.tb <- sits::sits_get_data(coverage = coverage_wtss.tb, longitude = as.numeric(longitude),
-                                   latitude = as.numeric(latitude),
-                                   bands = c(bands), start_date = start_date, end_date = end_date)
+    point.tb <- sits::sits_get_data(cube = cube_wtss, longitude = as.numeric(longitude),
+                                    latitude = as.numeric(latitude),
+                                    bands = c(bands), start_date = start_date, end_date = end_date)
     return(point.tb)
   }
 
   if(name_service == "SATVEG" & (coverage == "terra" | coverage == "aqua" | coverage == "comb")){
-    coverage_satveg.tb <- sits::sits_coverage(service = name_service, name = coverage)
+    cube_satveg <- sits::sits_cube(type = name_service, name = coverage)
     # retrieve the time series associated with the point from the WTSS server
-    point.tb <- sits::sits_get_data(coverage = coverage_satveg.tb,
+    point.tb <- sits::sits_get_data(cube = cube_satveg,
                                     longitude = as.numeric(longitude),
-                                    latitude = as.numeric(latitude),
-                                    prefilter = as.character(pre_filter))
+                                    latitude = as.numeric(latitude) )
     return(point.tb)
   }
 }
