@@ -7,7 +7,7 @@
 #'
 #' @usage TSoperationSHP(name_service = c("WTSS-INPE", "SATVEG"),
 #' coverage = c("MOD13Q1", "terra", "aqua", "comb"),
-#' bands = c("ndvi", "evi", "nir", "mir", "blue", "red"),
+#' bands = c("NDVI", "EVI", "NIR", "MIR", "BLUE", "RED"),
 #' start_date = NULL, end_date = NULL, pre_filter = "1", geojson_points = NULL)
 #'
 #' @param name_service  information of service, like WTSS-INPE or SATVEG.
@@ -25,7 +25,7 @@
 #' @importFrom tibble tibble
 #'
 
-TSoperationSHP <- function(name_service = c("WTSS-INPE", "SATVEG"), coverage = c("MOD13Q1", "terra", "aqua", "comb"), bands = c("ndvi", "evi", "nir", "mir", "blue", "red"), start_date = NULL, end_date = NULL, pre_filter = "1", geojson_points = NULL){
+TSoperationSHP <- function(name_service = c("WTSS-INPE", "SATVEG"), coverage = c("MOD13Q1", "terra", "aqua", "comb"), bands = c("NDVI", "EVI", "NIR", "MIR", "BLUE", "RED"), start_date = NULL, end_date = NULL, pre_filter = "1", geojson_points = NULL){
 
   #input validation
   name_service <- match.arg(name_service)
@@ -115,7 +115,7 @@ TSoperationSHP <- function(name_service = c("WTSS-INPE", "SATVEG"), coverage = c
 # library("terrabrasilisTimeSeries")
 # json_file <- '[{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-56.29034729510528,-13.240025261100111]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-56.29034729510528,-13.2377769601908]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-56.28803758114594,-13.240025261100111]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-56.28803758114594,-13.2377769601908]}}]'
 #
-# ts_data <- TSoperationSHP(name_service = "WTSS-INPE", coverage = "MOD13Q1", bands = "evi", start_date = "2000-02-18", end_date = "2017-08-21", geojson_points = json_file)
+# ts_data <- TSoperationSHP(name_service = "WTSS-INPE", coverage = "MOD13Q1", bands = "EVI", start_date = "2000-02-18", end_date = "2017-08-21", geojson_points = json_file)
 # plot.ts(x = ts_data[[2]]$Index, y = ts_data[[2]]$mean, type = "l")
 #
 # ts_dataSV <- TSoperationSHP(name_service = "SATVEG", coverage = "terra", geojson_points = json_file)

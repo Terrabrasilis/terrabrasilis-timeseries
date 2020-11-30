@@ -6,7 +6,7 @@
 \usage{
 TSoperation(name_service = c("WTSS-INPE", "SATVEG"),
 coverage = c("MOD13Q1", "terra", "aqua", "comb"), longitude = NULL,
-latitude = NULL, bands = c("ndvi", "evi", "nir", "mir", "blue", "red"),
+latitude = NULL, bands = c("NDVI", "EVI", "NIR", "MIR", "BLUE", "RED"),
 start_date = NULL, end_date = NULL, pre_filter = "1")
 }
 \arguments{
