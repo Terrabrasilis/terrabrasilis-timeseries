@@ -12,12 +12,15 @@ RoxygenNote: 7.1.0
 Imports:
         jsonlite,
         magrittr,
+        ptw,
+        signal,
         sits,
         stats,
         tibble,
         wtss
 Remotes:
-      e-sensing/sits
+      e-sensing/sits,
+      e-sensing/wtss
 URL: https://github.com/terrabrasilis/terrabrasilis-timeseries
 BugReports: https://github.com/terrabrasilis/terrabrasilis-timeseries
 Suggests: curl

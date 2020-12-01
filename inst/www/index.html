@@ -119,7 +119,7 @@
     </ul>
 
     <ul class="list-unstyled CTAs">
-      <a href="https://github.com/Terrabrasilis/terrabrasilisTimeSeries" target="_blank">
+      <a href="https://github.com/terrabrasilis/terrabrasilisTimeSeries" target="_blank">
         <button type="button" id="nv-home" class="btn btn-success"> <h5>Github Project</h5></button>
       </a>
     </ul>
@@ -171,13 +171,7 @@
               <option value="">-- Bands --</option>
             </select>
           </div>
-          <div class="form-group">
-            <label for="pre_filter">Pre filter SATVEG: </label>
-            <select class="form-control" id="pre_filter" required>
-              <option value="">-- Pre-filter SATVEG --</option>
-            </select>
-          </div>
-            <div class="form-group">
+           <div class="form-group">
               <label for="from">Start Date: </label>
               <input type="date" class="form-control" id="from" value="2008-05-04">
             </div>
@@ -208,14 +202,14 @@
               <div class="form-group" id="filter-whit">
                 <label for="parameter-Whittaker">Whittaker parameters: </label>
                 <label for="wh-lambda"> <input type="number" class="form-control" id="wh-lambda" required placeholder="lambda" step="0.01" value="1.0" disabled> lambda </label>
-                <label for="wh-differences"> <input type="number" class="form-control" id="wh-differences" required placeholder="differences" value="3" disabled> differences </label>
               </div>
               <div class="form-group" id="filter-sg">
                 <label for="parameter-Savitsky-Golay">Savitsky-Golay parameters: </label>
                 <label for="sg-order"> <input type="number" class="form-control" id="sg-order" required placeholder="order" value="3" disabled> order </label>
-                <label for="sg-scale"> <input type="number" class="form-control" id="sg-scale" required placeholder="scale" value="1" disabled> scale </label>
+                <label for="sg-length"> <input type="number" class="form-control" id="sg-length" required placeholder="length" value="5" disabled> length </label>
+                <label for="sg-scaling"> <input type="number" class="form-control" id="sg-scaling" required placeholder="scaling" value="1" disabled> sclaing </label>
               </div>
-              <button type="button" id="submitbuttonfilter" class="btn btn-success" disabled> Apply filter! </button>
+              <button type="button" id="submitbuttonfilter" class="btn btn-primary" disabled> Apply filter! </button>
       </div>
 
       <div class="col-sm-10">
