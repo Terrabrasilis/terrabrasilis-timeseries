@@ -25,5 +25,5 @@ RUN R -e 'devtools::install_github("e-sensing/sits")'
 RUN R -e 'devtools::install_github("terrabrasilis/terrabrasilis-timeseries")'
 
 RUN \
-echo 'Redirect /index.html /ocpu/library/ocpusits/www' > /etc/apache2/sites-enabled/app.conf
+echo 'Redirect /index.html /ocpu/library/terrabrasilisTimeSeries/www' > /etc/apache2/sites-enabled/app.conf
 
