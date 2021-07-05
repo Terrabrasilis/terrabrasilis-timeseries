@@ -289,47 +289,10 @@ $(document).ready(function () {
         $("#band").html("<option selected='selected' value='evi'> evi </option><option value='ndvi'> ndvi </option><option value='mir'> mir </option><option value='nir'> nir </option><option value='red'> red </option><option value='blue'> blue </option>");
         $("#band_shp").html("<option selected='selected' value='evi'> evi </option><option value='ndvi'> ndvi </option><option value='mir'> mir </option><option value='nir'> nir </option><option value='red'> red </option><option value='blue'> blue </option>");
         break;
-      case 'SATVEG':
-        $("#coverages").html("<option value='terra'>Terra</option><option value='aqua'>Aqua</option><option value='comb'>Combination</option>");
-        //$("#band").html("<option value='evi'> evi </option><option value='ndvi'> ndvi</option>");
-        $("#band").find("option").each(function (){
-          $(this).attr("disabled", "disabled");
-        });
-        $("#from").find("input").each(function (){
-          $(this).attr("disabled", "disabled");
-        });
-        $("#to").find("input").each(function (){
-          $(this).attr("disabled", "disabled");
-        });
-        break;
       default:
         $("#coverages").html("<option value=''>-- Coverage --</option>");
     }
  });
-
- $("#filter").change(function () {
-    switch ($(this).val()) {
-      case 'No-filter':
-        $("#wh-lambda").prop("disabled", true);
-        $("#sg-order").prop("disabled", true);
-        $("#sg-length").prop("disabled", true);
-        $("#sg-scaling").prop("disabled", true);
-        break;
-      case 'Whittaker':
-        $("#wh-lambda").prop("disabled", false);
-        $("#sg-order").prop("disabled", true);
-        $("#sg-length").prop("disabled", true);
-        $("#sg-scaling").prop("disabled", true);
-        break;
-      case 'Savitsky-Golay':
-        $("#wh-lambda").prop("disabled", true);
-        $("#sg-order").prop("disabled", false);
-        $("#sg-length").prop("disabled", false);
-        $("#sg-scaling").prop("disabled", false);
-        break;
-    }
-  });
-
 
   //----- define graphic properties D3.js C3
   function prepareData(data) {
@@ -544,51 +507,6 @@ $(document).ready(function () {
     }
   }
 
-  // filters
-  function timeSeriesFilter() {
-    var filter_selected = $("#filter option:selected").val();
-    console.log('filter: ', filter_selected);
-    var wh_lambda_selected = $("#wh-lambda").val();
-    console.log('wh-lambda: ', wh_lambda_selected);
-    var sg_order_selected = $("#sg-order").val();
-    console.log('sg-order: ', sg_order_selected);
-    var sg_length_selected = $("#sg-length").val();
-    console.log('sg-length: ', sg_length_selected);
-    var sg_scaling_selected = $("#sg-scaling").val();
-    console.log('sg-scaling: ', sg_scaling_selected);
-
-    //disable the button to prevent multiple clicks
-    $("#submitbuttonfilter").attr("disabled", "disabled");
-
-    var req = ocpu.call("TSfilter", { //rpc
-        ts_data: mySession_point,
-        type_filter: filter_selected,
-        wh_lambda: wh_lambda_selected,
-        sg_order: sg_order_selected,
-        sg_length: sg_length_selected,
-        sg_scaling: sg_scaling_selected,
-    }, function (session) {
-        //console.log('mySession_point: ', mySession_point);
-          session.getObject(function (data) {
-          var myData = data[0].time_series;
-          //console.log('MyData filter: ', myData);
-          var series = prepareData(myData);
-          //console.log('series: ', series);
-
-          var str = JSON.stringify(series).replace(/.wt/g, "_wt"); //convert to JSON string
-          str = str.replace(/.sg/g, "_sg");
-          var series2 = JSON.parse(str);    //convert back to array
-          console.log('series filter: ', series2);
-
-          plotChart(series2);
-        });
-    }).always(function () { //after request complete, re-enable the button
-      $("#submitbuttonfilter").removeAttr("disabled");
-    }).fail(function () { //if R returns an error, alert the error message
-      alert("Failed to plot time series filtered!\nAcquire the time series first!");
-    });
-  }
-
   function timeSeriesShp() {
     var service_selected = $("#services option:selected").val();
     console.log('service: ', service_selected);
@@ -664,11 +582,6 @@ $(document).ready(function () {
     $('#band').toggle(this.value !== 'polygon');
     $('#band_shp').toggle(this.value !== 'point');
     $('#title-chart-filter').toggle(this.value !== 'polygon');
-    $('#filter').toggle(this.value !== 'polygon');
-    $('#filter-group').toggle(this.value !== 'polygon');
-    $('#filter-whit').toggle(this.value !== 'polygon');
-    $('#filter-sg').toggle(this.value !== 'polygon');
-    $('#submitbuttonfilter').toggle(this.value !== 'polygon');
 
     if ($('#get-point').is(':checked')) {
 

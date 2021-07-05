@@ -4,10 +4,10 @@
 \alias{TSoperationSHP}
 \title{TS Operation shapefile}
 \usage{
-TSoperationSHP(name_service = c("WTSS-INPE", "SATVEG"),
-coverage = c("MOD13Q1", "terra", "aqua", "comb"),
-bands = c("NDVI", "EVI", "NIR", "MIR", "BLUE", "RED"),
-start_date = NULL, end_date = NULL, pre_filter = "1", geojson_points = NULL)
+TSoperationSHP(name_service = "WTSS-INPE",
+coverage = "MOD13Q1",
+bands = c("ndvi", "evi", "nir", "mir", "blue", "red"),
+start_date = NULL, end_date = NULL, geojson_points = NULL)
 }
 \arguments{
 \item{name_service}{information of service, like WTSS-INPE or SATVEG.}
@@ -19,8 +19,6 @@ start_date = NULL, end_date = NULL, pre_filter = "1", geojson_points = NULL)
 \item{start_date}{first date of interval}
 
 \item{end_date}{last date of the interval}
-
-\item{pre_filter}{a string ("0" none, "1" no data correction, "2" cloud correction, "3" no data and cloud correction). Information of sits package.}
 
 \item{geojson_points}{receive a GeoJSON with all points from polygon}
 }

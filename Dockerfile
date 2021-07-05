@@ -20,8 +20,7 @@ RUN apt-get -qy autoremove
 
 # install R packages
 RUN R -e 'install.packages("devtools")'
-RUN R -e 'devtools::install_github("e-sensing/wtss")'
-RUN R -e 'devtools::install_github("e-sensing/sits")'
+RUN R -e 'devtools::install_github("e-sensing/Rwtss")'
 RUN R -e 'devtools::install_github("terrabrasilis/terrabrasilis-timeseries")'
 
 RUN \
