@@ -19,7 +19,9 @@ RUN apt-get -qy install libgeos-dev
 RUN apt-get -qy autoremove
 
 # install R packages
-RUN R -e 'install.packages("devtools")'
+RUN R -e 'install.packages(c("sethis", "pkgload", "roxygen2", "parsedate"))'
+RUN R -e 'install.packages("testthat", dependencies = TRUE)'
+RUN R -e 'install.packages("devtools", dependencies = TRUE)'
 RUN R -e 'devtools::install_github("e-sensing/Rwtss")'
 RUN R -e 'devtools::install_github("terrabrasilis/terrabrasilis-timeseries")'
 
